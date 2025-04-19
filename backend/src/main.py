@@ -1,9 +1,10 @@
-from fastapi import FastAPI, APIRouter, Depends
+from fastapi import FastAPI, APIRouter, Depends, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
-from typing import Dict, Any
+from typing import Dict, Any, List
 
 from src.agents.rag_agent import RagAgent
+from src.agents.project_planner_agent import ProjectPlannerAgent
 from src.utils.openai import OpenAIClient
 from src.utils.vector_db import VectorDB
 from src.config.config import ConfigManager
@@ -34,6 +35,12 @@ router = APIRouter()
 class QueryRequest(BaseModel):
     query: str
 
+class QueryInput(BaseModel):
+    query: str
+
+class IdeaInput(BaseModel):
+    idea: Dict[str, Any]
+
 # Initialize services
 vector_db = VectorDB(config_manager)
 vector_db.load_documents()  # Load documents from configured source
@@ -52,9 +59,23 @@ async def rag_query(
     response = await rag_agent.process({"query": request.query})
     return response
 
+@app.post("/plans")
+async def generate_plan(input_data: IdeaInput) -> Dict[str, Any]:
+    """Generate a detailed project plan for a selected idea."""
+    try:
+        project_planner_agent = ProjectPlannerAgent(OpenAIClient.get_instance())
+        response = await project_planner_agent.process(input_data.dict())
+        return response
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
+
 app.include_router(
     router,
     prefix="/api",
 )
+
+if __name__ == "__main__":
+    import uvicorn
+    uvicorn.run(app, host="0.0.0.0", port=8000)
 
 
