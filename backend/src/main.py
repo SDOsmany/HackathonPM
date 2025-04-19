@@ -36,7 +36,7 @@ class QueryRequest(BaseModel):
 
 # Initialize services
 vector_db = VectorDB(config_manager)
-vector_db.load_documents("data/hackathon_projects")  # Load documents from this directory
+vector_db.load_documents()  # Load documents from configured source
 
 async def get_rag_agent() -> RagAgent:
     """Dependency injection for the RAG agent."""
