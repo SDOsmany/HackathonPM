@@ -7,6 +7,7 @@ import { Idea, ExecutionPlan } from '@/types'; // Adjust path if needed
 import InputForm from '@/components/InputForm';
 import IdeaList from '@/components/IdeaList';
 import PlanDisplay from '@/components/PlanDisplay';
+import { Button } from '@/components/ui/button';
 
 // Define the phases
 type AppPhase = 'input' | 'generating_ideas' | 'show_ideas' | 'generating_plan' | 'show_plan' | 'error';
