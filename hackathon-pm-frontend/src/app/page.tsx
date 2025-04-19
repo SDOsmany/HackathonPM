@@ -27,10 +27,14 @@ export default function HomePage() {
     setError(null); // Clear previous errors
     try {
       // Replace with your actual backend API endpoint
-      const res = await fetch('/api/generate-ideas', { // Assuming a Next.js API route proxy or direct backend call
-        method: 'POST',
+      // const res = await fetch('/api/generate-ideas', { // Assuming a Next.js API route proxy or direct backend call
+      //   method: 'POST',
+      //   headers: { 'Content-Type': 'application/json' },
+      //   body: JSON.stringify({ themeOrIdea: ideaInput }),
+      // });
+      const res = await fetch("http://localhost:8000/items/1", { // Assuming a Next.js API route proxy or direct backend call
+        method: 'GET',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ themeOrIdea: ideaInput }),
       });
 
       if (!res.ok) {
@@ -40,6 +44,7 @@ export default function HomePage() {
 
       const data = await res.json();
       // Assuming backend returns { ideas: Idea[] }
+      console.log("data:", data)
       if (data.ideas && data.ideas.length > 0) {
         setGeneratedIdeas(data.ideas);
         setPhase('show_ideas');
