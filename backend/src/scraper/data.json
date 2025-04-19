@@ -20,7 +20,7 @@
         "is_github_url": true,
         "is_devpost_url": false,
         "title": "UpZone",
-        "award": "BEST BREAKOUT TEAM & HACKER\u2019S CHOICE:",
+        "award": "BEST BREAKOUT TEAM & HACKER'S CHOICE:",
         "summary": "UpZone is your one-click solution to modeling your NYC lot's buildable zoning volume. The app searches multi-thousand-page zoning resolution documents and city websites, identifies relevant zoning requirements, and generates a user-friendly 3D model for architects to hit the ground running with design. Developed by a diverse team of architects, software developers, machine learning engineers, computational designers, and structural engineers. It combines large language models with spatial algorithms to turn complex, interconnected data into a clean, legible 3D model."
     },
     {
@@ -45,7 +45,7 @@
         "is_devpost_url": false,
         "title": "D-AI-LOG",
         "award": "No Award Found",
-        "summary": "This project demonstrates how to create a FastAPI-based API that interacts with an OpenAI assistant. The API allows you to retrieve the assistant, send messages, and receive responses, all using OpenAI\u2019s Assistant and Thread APIs. It receives instructions to generate a building and returns the building description in a JSON format."
+        "summary": "This project demonstrates how to create a FastAPI-based API that interacts with an OpenAI assistant. The API allows you to retrieve the assistant, send messages, and receive responses, all using OpenAI's Assistant and Thread APIs. It receives instructions to generate a building and returns the building description in a JSON format."
     },
     {
         "url": "https://github.com/v-machine/Nolli-Cannolli",
@@ -149,7 +149,7 @@
         "is_devpost_url": false,
         "title": "Smart Tutorial",
         "award": "No Award Found",
-        "summary": "A web app to make interactive, \u2018intelligent\u2019 tutorials based on your codebase and domain-specific knowledge. Write a minimal tutorial with general key points, add links to your codebase repo, and let SmartTutorial generate for you a complete and detailed tutorial based on your programming domain."
+        "summary": "A web app to make interactive, 'intelligent' tutorials based on your codebase and domain-specific knowledge. Write a minimal tutorial with general key points, add links to your codebase repo, and let SmartTutorial generate for you a complete and detailed tutorial based on your programming domain."
     },
     {
         "url": "https://github.com/maxdumas/aectech-hackathon",
@@ -571,7 +571,7 @@
         "url": "https://github.com/MingboPeng/AECTech18_RhinoInRevit/",
         "is_github_url": true,
         "is_devpost_url": false,
-        "title": "Take \u2018n Bake",
+        "title": "Take 'n Bake",
         "award": "No Award Found",
         "summary": "No Summary Found"
     },
