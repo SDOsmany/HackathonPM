@@ -32,8 +32,8 @@ def get_readme_content(github_url):
         try:
             response = requests.get(url)
             # Check if the request was successful (status code 200)
-            if not (response.ok):
-                print(f"FAILED FOR THIS URL: {url}")
+            # if not (response.ok):
+            #     print(f"FAILED FOR THIS URL: {github_url}")
             if response.status_code == 200:
                 # print(f"Successfully fetched README from: {url}") # Optional feedback
                 return response.text # Return the content immediately upon success
