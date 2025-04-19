@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import { Idea, ExecutionPlan } from '@/types'; // Adjust path if needed
+import { Button } from '@/components/ui/button';
 
 // Import your components
 import InputForm from '@/components/InputForm';
@@ -46,9 +47,10 @@ export default function HomePage() {
          throw new Error('Backend did not return any ideas.');
       }
 
-    } catch (err: any) {
+    } catch (err: unknown) {
       console.error("Error generating ideas:", err);
-      setError(err.message);
+      const errorMessage = err instanceof Error ? err.message : 'An unknown error occurred';
+      setError(errorMessage);
       setPhase('error'); // Or back to input with error
     }
   };
@@ -75,9 +77,10 @@ export default function HomePage() {
       setExecutionPlan(data.plan); // Assuming the plan is in data.plan
       setPhase('show_plan');
 
-    } catch (err: any) {
+    } catch (err: unknown) {
       console.error("Error generating plan:", err);
-      setError(err.message);
+      const errorMessage = err instanceof Error ? err.message : 'Error generating plan';
+      setError(errorMessage);
       setPhase('error'); // Or back to idea selection with error
     }
   };
@@ -145,8 +148,8 @@ export default function HomePage() {
             <div className="h-8 w-8 mx-auto mb-4 rounded-full bg-primary animate-pulse"></div>
             <p className="text-lg">{phase === 'generating_ideas' ? 'Generating ideas...' : 'Crafting the plan...'}</p>
             {/* Optional: Show the input/selected idea */}
-             {inputValue && phase === 'generating_ideas' && <p className="text-sm text-muted-foreground mt-2">Based on: "{inputValue}"</p>}
-             {selectedIdea && phase === 'generating_plan' && <p className="text-sm text-muted-foreground mt-2">For idea: "{selectedIdea.title}"</p>}
+             {inputValue && phase === 'generating_ideas' && <p className="text-sm text-muted-foreground mt-2">Based on: &apos;{inputValue}&apos;</p>}
+             {selectedIdea && phase === 'generating_plan' && <p className="text-sm text-muted-foreground mt-2">For idea: &apos;{selectedIdea.title}&apos;</p>}
 
         </div>
       )}

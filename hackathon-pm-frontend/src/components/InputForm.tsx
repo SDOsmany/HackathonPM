@@ -11,7 +11,7 @@ interface InputFormProps {
   isLoading: boolean; // Passed down from parent
 }
 
-export default function InputForm({ value, onChange, onSubmit, isLoading }: InputFormProps) {
+export default function InputForm({ value, onChange, onSubmit}: InputFormProps) {
   const [buttonLoading, setButtonLoading] = useState(false); // Manage local button loading
 
   const handleSubmit = async () => {
@@ -27,7 +27,7 @@ export default function InputForm({ value, onChange, onSubmit, isLoading }: Inpu
   return (
     <Card>
       <CardHeader>
-        <CardTitle className="text-center">What's your hackathon idea or theme?</CardTitle>
+        <CardTitle className="text-center">What is your hackathon idea or theme?</CardTitle>
       </CardHeader>
       <CardContent>
         <form onSubmit={(e) => { e.preventDefault(); handleSubmit(); }} className="grid w-full items-center gap-4">
