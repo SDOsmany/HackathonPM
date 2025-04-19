@@ -32,6 +32,8 @@ def get_readme_content(github_url):
         try:
             response = requests.get(url)
             # Check if the request was successful (status code 200)
+            if not (response.ok):
+                print(f"FAILED FOR THIS URL: {url}")
             if response.status_code == 200:
                 # print(f"Successfully fetched README from: {url}") # Optional feedback
                 return response.text # Return the content immediately upon success
@@ -61,9 +63,9 @@ BANNED_GITHUB_URLS = [
     "https://github.com/graphhop"
 ]
 
-for d in d_list[1:2]:
+for d in d_list:
     if d.get("is_github_url", False):
-        print(f"GitHub URL: {d['url']}")
+        # print(f"GitHub URL: {d['url']}")
         # Get README.md file
         github_url = d["url"]
         if github_url in BANNED_GITHUB_URLS:
