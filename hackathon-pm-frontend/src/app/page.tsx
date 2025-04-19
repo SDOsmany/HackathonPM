@@ -33,11 +33,6 @@ export default function HomePage() {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ query: ideaInput }),
       });
-      // const res = await fetch("http://localhost:8000/api/rag", { // Assuming a Next.js API route proxy or direct backend call
-      //   method: 'POST',
-      //   headers: { 'Content-Type': 'application/json' },
-      //   body: JSON.stringify({ query: ideaInput })
-      // });
       if (!res.ok) {
         const errorData = await res.json();
         throw new Error(errorData.message || 'Failed to generate ideas.');
@@ -67,12 +62,6 @@ export default function HomePage() {
     setSelectedIdea(idea); // Set selected idea immediately
     setError(null); // Clear previous errors
     try {
-      // Replace with your actual backend API endpoint
-      // const res = await fetch('/api/generate-plan', { // Assuming a Next.js API route proxy or direct backend call
-      //   method: 'POST',
-      //   headers: { 'Content-Type': 'application/json' },
-      //   body: JSON.stringify({ selectedIdea: idea }), // Send the selected idea object
-      // });
       const res = await fetch(API_ENDPOINTS.GENERATE_PLAN, { // Assuming a Next.js API route proxy or direct backend call
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -85,6 +74,7 @@ export default function HomePage() {
       }
 
       const data = await res.json();
+      console.log("plan data:", data)
       // Assuming backend returns ExecutionPlan object
       setExecutionPlan(data.rawText); // Assuming the plan is in data.plan
       setPhase('show_plan');

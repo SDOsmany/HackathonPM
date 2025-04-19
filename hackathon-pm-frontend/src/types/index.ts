@@ -8,5 +8,5 @@ export interface Idea {
   }
   
   export interface ExecutionPlan {
-    rawText?: string; // Maybe store the raw LLM output too
+    rawText: string; // Maybe store the raw LLM output too
   }
