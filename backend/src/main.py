@@ -59,7 +59,7 @@ async def rag_query(
     response = await rag_agent.process({"query": request.query})
     return response
 
-@app.post("/plans/generate")
+@app.post("/plans")
 async def generate_plan(input_data: IdeaInput) -> Dict[str, Any]:
     """Generate a detailed project plan for a selected idea."""
     try:
