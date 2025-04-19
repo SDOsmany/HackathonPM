@@ -56,11 +56,19 @@ FILE_PATH = "data.json"
 with open(FILE_PATH, "r") as file:
     d_list = json.load(file)
 
-for d in d_list:
+# These are for manually fixed url parsings
+BANNED_GITHUB_URLS = [
+    "https://github.com/graphhop"
+]
+
+for d in d_list[1:2]:
     if d.get("is_github_url", False):
         print(f"GitHub URL: {d['url']}")
         # Get README.md file
         github_url = d["url"]
+        if github_url in BANNED_GITHUB_URLS:
+            # print(f"Skipping banned GitHub URL: {github_url}")
+            continue
         readme_content = get_readme_content(github_url)
         # print(f"{github_url}: {readme_content}")
         # assert "content" not in d
