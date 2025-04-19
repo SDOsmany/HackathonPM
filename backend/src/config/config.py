@@ -2,6 +2,7 @@ from typing import Optional
 from pydantic import BaseModel, Field
 from dotenv import load_dotenv
 import os
+from pathlib import Path
 
 class OpenAIConfig(BaseModel):
     """OpenAI configuration settings."""
@@ -17,10 +18,16 @@ class ServerConfig(BaseModel):
     debug: bool = Field(default=True, description="Debug mode")
     cors_origins: list[str] = Field(default=[], description="Allowed CORS origins")
 
+class DataConfig(BaseModel):
+    """Data source configuration settings."""
+    source_file: str = Field(default="src/scraper/data.json", description="Path to the data source file")
+    vector_store_path: str = Field(default="src/data/vector_store", description="Path to store the vector database")
+
 class Config(BaseModel):
     """Main configuration class that combines all config sections."""
     openai: OpenAIConfig
     server: ServerConfig = Field(default_factory=ServerConfig)
+    data: DataConfig = Field(default_factory=DataConfig)
 
 class ConfigManager:
     """Singleton class to manage configuration."""
@@ -56,9 +63,16 @@ class ConfigManager:
             cors_origins=os.getenv("CORS_ORIGINS", "").split(",") if os.getenv("CORS_ORIGINS") else []
         )
 
+        # Load data config
+        data_config = DataConfig(
+            source_file=os.getenv("DATA_SOURCE_FILE", "src/scraper/data.json"),
+            vector_store_path=os.getenv("VECTOR_STORE_PATH", "src/data/vector_store")
+        )
+
         self._config = Config(
             openai=openai_config,
-            server=server_config
+            server=server_config,
+            data=data_config
         )
 
     @property
@@ -72,4 +86,8 @@ class ConfigManager:
 
     def get_server_config(self) -> ServerConfig:
         """Get server configuration."""
-        return self._config.server 
+        return self._config.server
+
+    def get_data_config(self) -> DataConfig:
+        """Get data configuration."""
+        return self._config.data 
