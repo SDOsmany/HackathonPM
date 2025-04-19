@@ -27,22 +27,23 @@ export default function HomePage() {
     setError(null); // Clear previous errors
     try {
       // Replace with your actual backend API endpoint
-      // const res = await fetch('/api/generate-ideas', { // Assuming a Next.js API route proxy or direct backend call
+      const res = await fetch('https://hackathonpm.onrender.com/api/rag', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ query: ideaInput }),
+      });
+      // const res = await fetch("http://localhost:8000/api/rag", { // Assuming a Next.js API route proxy or direct backend call
       //   method: 'POST',
       //   headers: { 'Content-Type': 'application/json' },
-      //   body: JSON.stringify({ themeOrIdea: ideaInput }),
+      //   body: JSON.stringify({ query: ideaInput })
       // });
-      const res = await fetch("http://localhost:8000/items/1", { // Assuming a Next.js API route proxy or direct backend call
-        method: 'GET',
-        headers: { 'Content-Type': 'application/json' },
-      });
-
       if (!res.ok) {
         const errorData = await res.json();
         throw new Error(errorData.message || 'Failed to generate ideas.');
       }
 
       const data = await res.json();
+      console.log("data:", data)
       // Assuming backend returns { ideas: Idea[] }
       console.log("data:", data)
       if (data.ideas && data.ideas.length > 0) {
@@ -66,12 +67,17 @@ export default function HomePage() {
     setError(null); // Clear previous errors
     try {
       // Replace with your actual backend API endpoint
-      const res = await fetch('/api/generate-plan', { // Assuming a Next.js API route proxy or direct backend call
+      // const res = await fetch('/api/generate-plan', { // Assuming a Next.js API route proxy or direct backend call
+      //   method: 'POST',
+      //   headers: { 'Content-Type': 'application/json' },
+      //   body: JSON.stringify({ selectedIdea: idea }), // Send the selected idea object
+      // });
+      const res = await fetch("http://localhost:8000/api/plans/generate", { // Assuming a Next.js API route proxy or direct backend call
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ selectedIdea: idea }), // Send the selected idea object
+        body: JSON.stringify({ idea: idea }), // Send the selected idea object
       });
-
+      console.log("req: ", JSON.stringify({ idea: idea }))
       if (!res.ok) {
          const errorData = await res.json();
          throw new Error(errorData.message || 'Failed to generate plan.');
@@ -79,7 +85,7 @@ export default function HomePage() {
 
       const data = await res.json();
       // Assuming backend returns ExecutionPlan object
-      setExecutionPlan(data.plan); // Assuming the plan is in data.plan
+      setExecutionPlan(data.rawText); // Assuming the plan is in data.plan
       setPhase('show_plan');
 
     } catch (err: unknown) {

@@ -8,12 +8,5 @@ export interface Idea {
   }
   
   export interface ExecutionPlan {
-    // Structure this based on your desired plan output
-    problemStatement: string;
-    coreFeatures: string[]; // Or a more complex structure
-    techStack: string[];
-    timeline: { milestone: string; tasks: string[] }[];
-    teamRoles: string[];
-    // Add other relevant sections...
     rawText?: string; // Maybe store the raw LLM output too
   }
