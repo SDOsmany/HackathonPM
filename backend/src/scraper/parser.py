@@ -141,6 +141,10 @@ for d in d_list:
             continue
         content = get_devpost_description(devpost_url)
         d["content"] = content
+    
+    # Now, using summary and content fields, make a request to OpenAI API
+    # to create "gpt_summary" and "gpt_content" fields
+    
 
 # Save the updated list back to the JSON file
 with open(FILE_PATH, "w") as file:
