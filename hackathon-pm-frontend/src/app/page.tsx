@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import { Idea, ExecutionPlan } from '@/types'; // Adjust path if needed
 import { Button } from '@/components/ui/button';
+import { API_ENDPOINTS } from '@/config/api';
 
 // Import your components
 import InputForm from '@/components/InputForm';
@@ -27,7 +28,7 @@ export default function HomePage() {
     setError(null); // Clear previous errors
     try {
       // Replace with your actual backend API endpoint
-      const res = await fetch('https://hackathonpm.onrender.com/api/rag', {
+      const res = await fetch(API_ENDPOINTS.RAG, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ query: ideaInput }),
@@ -72,7 +73,7 @@ export default function HomePage() {
       //   headers: { 'Content-Type': 'application/json' },
       //   body: JSON.stringify({ selectedIdea: idea }), // Send the selected idea object
       // });
-      const res = await fetch("http://localhost:8000/api/plans/generate", { // Assuming a Next.js API route proxy or direct backend call
+      const res = await fetch(API_ENDPOINTS.GENERATE_PLAN, { // Assuming a Next.js API route proxy or direct backend call
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ idea: idea }), // Send the selected idea object
