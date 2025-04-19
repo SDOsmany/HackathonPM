@@ -1,0 +1,738 @@
+[
+    {
+        "url": "https://github.com/DEV-RIOS/SnailAI",
+        "is_github_url": true,
+        "is_devpost_url": false,
+        "title": "Snail Rendering",
+        "award": "BEST OVERALL HACK:",
+        "summary": "\"Realtime\" AI imagination for your Rhino model, all within a Rhino viewport, activated via a Display Mode."
+    },
+    {
+        "url": "https://github.com/graphhop",
+        "is_github_url": true,
+        "is_devpost_url": false,
+        "title": "Graph-Hop",
+        "award": "BEST COLLABORATIVE HACK:",
+        "summary": "This project is designed to consume Grasshopper files, parse their component data, and store the information in a TinkerPop graph database. This allows for version control and analysis of Grasshopper files."
+    },
+    {
+        "url": "https://github.com/ssajedi/upzone",
+        "is_github_url": true,
+        "is_devpost_url": false,
+        "title": "UpZone",
+        "award": "BEST BREAKOUT TEAM & HACKER\u2019S CHOICE:",
+        "summary": "UpZone is your one-click solution to modeling your NYC lot's buildable zoning volume. The app searches multi-thousand-page zoning resolution documents and city websites, identifies relevant zoning requirements, and generates a user-friendly 3D model for architects to hit the ground running with design. Developed by a diverse team of architects, software developers, machine learning engineers, computational designers, and structural engineers. It combines large language models with spatial algorithms to turn complex, interconnected data into a clean, legible 3D model."
+    },
+    {
+        "url": "https://github.com/team-speckle-automation/SPLASH",
+        "is_github_url": true,
+        "is_devpost_url": false,
+        "title": "Splash",
+        "award": "No Award Found",
+        "summary": "This project aims to streamline model analysis and enhance feedback processes for AEC projects. By integrating Speckle, we provide stakeholders easy web-based access to 3D model analysis results that update in real-time!. This setup empowers non-technical stakeholders to review analysis outputs and provide feedback directly, without needing specialized software like Revit or Rhino."
+    },
+    {
+        "url": "https://github.com/murra133/EarthToRhino",
+        "is_github_url": true,
+        "is_devpost_url": false,
+        "title": "Earth to Rhino",
+        "award": "No Award Found",
+        "summary": "EarthToRhino is a bridge between Cesium, a 3d Geospatial platform, and McNeel's Rhinoceros 3D through Grasshopper."
+    },
+    {
+        "url": "https://github.com/lukegehron/NLP-to-3DBuildings",
+        "is_github_url": true,
+        "is_devpost_url": false,
+        "title": "D-AI-LOG",
+        "award": "No Award Found",
+        "summary": "This project demonstrates how to create a FastAPI-based API that interacts with an OpenAI assistant. The API allows you to retrieve the assistant, send messages, and receive responses, all using OpenAI\u2019s Assistant and Thread APIs. It receives instructions to generate a building and returns the building description in a JSON format."
+    },
+    {
+        "url": "https://github.com/v-machine/Nolli-Cannolli",
+        "is_github_url": true,
+        "is_devpost_url": false,
+        "title": "Nolli Cannolli",
+        "award": "No Award Found",
+        "summary": "N-C is a project that fine-tunes a diffusion model on Nolli maps to easily generate baseline geometry with diverse urban form. The model creates images that hybridize the urban fabric from any city and can be adapted to a specific site boundary. These images feed into a Grasshopper script to generate 3d massing with customizable density."
+    },
+    {
+        "url": "https://github.com/Kyungho0511/3d-scan-with-spatial-analysis/tree/ms_pythonCode",
+        "is_github_url": true,
+        "is_devpost_url": false,
+        "title": "From AEC to your HOME!",
+        "award": "No Award Found",
+        "summary": "Tools for preprocessing point clouds for analysis in Grasshopper using Ladybug and for web visualization with React and Three.js. The preprocessing pipeline cleans, transforms, and prepares spatial data, making it compatible with computational design workflows and interactive 3D visualization."
+    },
+    {
+        "url": "https://github.com/jacksonjunelee/AEC_Hackathon_qrkiller",
+        "is_github_url": true,
+        "is_devpost_url": false,
+        "title": "IMPRINT",
+        "award": "No Award Found",
+        "summary": "The \"Imprint\" project presents a solution to replace QR codes with embedded, design-integrated visual links. Criticizing QR codes as disruptive and unreadable, it utilizes computer vision and image segmentation across platforms like web frontends, device frontends, and a Revit add-in to embed information directly within images. By generating data embeddings from processed images and employing techniques like image augmentation and feature extraction, Imprint enables drawings and photos to function as interactive, linkable elements\u2014eliminating the need for traditional QR codes."
+    },
+    {
+        "url": "https://github.com/SHL-Digital-Practice/eq-backend",
+        "is_github_url": true,
+        "is_devpost_url": false,
+        "title": "EQUALIZER",
+        "award": "No Award Found",
+        "summary": "No Summary Found"
+    },
+    {
+        "url": "https://github.com/ssajedi/FAM-JAM",
+        "is_github_url": true,
+        "is_devpost_url": false,
+        "title": "FAM JAM",
+        "award": "BEST OVERALL HACK:",
+        "summary": "FAM JAM is a Revit Plugin developed during the 2024 AECTech Hackathon. We created a solution aimed at simplifying specification sheet management for Revit, targeting architectural workflows. Fam Jam allows users to seamlessly integrate Revit families with specification sheets, addressing a common bottleneck by turning families into specs, making the process more intuitive and efficient."
+    },
+    {
+        "url": "https://github.com/CruisingCtrl/AECroom107",
+        "is_github_url": true,
+        "is_devpost_url": false,
+        "title": "Auto Park",
+        "award": "No Award Found",
+        "summary": "Auto Park is a study that aims to streamline the parking lot design process by automating 3D model generation using client-provided 2D data."
+    },
+    {
+        "url": "https://github.com/AGranosik/TheCanvas",
+        "is_github_url": true,
+        "is_devpost_url": false,
+        "title": "C",
+        "award": "BEST OVERALL HACK:",
+        "summary": "A sharable analysis application where designers push models and analysis from RHINO Software to Speckle. Speckle's new Automate picks up the model for further analysis and then the designer can browse, inspect and share direct links with stakeholders the results on a simple web page, no login required."
+    },
+    {
+        "url": "https://github.com/EdShapeDiver/CoffeeBridges",
+        "is_github_url": true,
+        "is_devpost_url": false,
+        "title": "Bridges for Coffee",
+        "award": "BEST COLLABORATIVE HACK:",
+        "summary": "From just 2 points on a map to a 3d-printable bridge concept with design and production models, AI-enabled rendering and documentation in PDF. All so that you can get to your morning coffee faster"
+    },
+    {
+        "url": "https://github.com/peng-an-chen/aectech-hackathon-2024-tag-it",
+        "is_github_url": true,
+        "is_devpost_url": false,
+        "title": "Tag It",
+        "award": "BEST OPEN SOURCE HACK:",
+        "summary": "Real time markups from PDF to BIM. Improving markups and collaboration."
+    },
+    {
+        "url": "https://github.com/viktor-platform/aectech-spain-1",
+        "is_github_url": true,
+        "is_devpost_url": false,
+        "title": "Open BID",
+        "award": "No Award Found",
+        "summary": "A marketplace that clients and designers can upload their projects, and receive back transparent cost bidding from multiple suppliers, specific for that particular building part or contract, and review it within their design model."
+    },
+    {
+        "url": "https://github.com/shapediver/SausageDog_AECTechBarcelona2024",
+        "is_github_url": true,
+        "is_devpost_url": false,
+        "title": "Sausage Dog",
+        "award": "No Award Found",
+        "summary": "Simple web tool for running multiobjective optimization on GH models of a hot dog. Ability to dynamically plug-in a complex models to the web solver with segregation of the Design Space from the GA-Solver (cloud based) and integration of an external NSGA-II library into Shapediver AppBuilder."
+    },
+    {
+        "url": "https://github.com/sergiomorph/Geocoris",
+        "is_github_url": true,
+        "is_devpost_url": false,
+        "title": "Geocoris",
+        "award": "No Award Found",
+        "summary": "Bi-directional Unity (Meta Quest 3) - Rhino + Grasshopper connection. Provide a real time tool, based on augmented reality, for 3D sketching and previewing scalable parametric models while allowing computational designers to update and modify their real-time streamed Grasshopper definitions."
+    },
+    {
+        "url": "https://github.com/Licini/SmartTutorial",
+        "is_github_url": true,
+        "is_devpost_url": false,
+        "title": "Smart Tutorial",
+        "award": "No Award Found",
+        "summary": "A web app to make interactive, \u2018intelligent\u2019 tutorials based on your codebase and domain-specific knowledge. Write a minimal tutorial with general key points, add links to your codebase repo, and let SmartTutorial generate for you a complete and detailed tutorial based on your programming domain."
+    },
+    {
+        "url": "https://github.com/maxdumas/aectech-hackathon",
+        "is_github_url": true,
+        "is_devpost_url": false,
+        "title": "All The Way Down",
+        "award": "BEST OVERALL HACK:",
+        "summary": "AllTheWayDown allows for managing dependencies within design workflows, which decreases length of time between design iterations, introduces Git-based version control, and eliminates discrepancies between different stages of design. Initially, AllTheWayDown works for Grasshopper script graphs and Rhino models. Future iterations will expand to other design tools and data inputs."
+    },
+    {
+        "url": "https://github.com/rhino-anywhere",
+        "is_github_url": true,
+        "is_devpost_url": false,
+        "title": "Rhino Anywhere",
+        "award": "BEST COLLABORATIVE HACK:",
+        "summary": "Rhino Anywhere is a framework that enables high definition streaming of a Rhino Model Viewport to the web. This allows you to reskin and interact with Rhino in any way you desire, whilst still working in the native Rhino Environment. You can create specific command sets for users."
+    },
+    {
+        "url": "https://github.com/TeamZombies/furne_frontend",
+        "is_github_url": true,
+        "is_devpost_url": false,
+        "title": "FURN-E",
+        "award": "BEST OPEN SOURCE HACK:",
+        "summary": "This Vue.js application uses the OpenAI API to generate images based on a user-provided description and presents the generated images for selection. Additionally, it displays product options based on those generated images."
+    },
+    {
+        "url": "https://github.com/ssajedi/SAiF-GPT",
+        "is_github_url": true,
+        "is_devpost_url": false,
+        "title": "SAiF-GPT",
+        "award": "No Award Found",
+        "summary": "SAiF-GPT aims to provide a solution for using Chat GPT in a secure and compliant manner, even when dealing with sensitive information. To ensure that corporate policies and NDAs are respected, the code and process automate entity detection and anonymization by replacing them with analogous values. The end goal is to allow AEC industry to use AI technology like ChatGPT for document analysis while protecting confidential data."
+    },
+    {
+        "url": "https://github.com/SHL-Digital-Practice/the-boring-labels",
+        "is_github_url": true,
+        "is_devpost_url": false,
+        "title": "Boring",
+        "award": "No Award Found",
+        "summary": "Smart Real-time Naming for Your Spaces"
+    },
+    {
+        "url": "https://github.com/czwangxtt/AEC-Hack",
+        "is_github_url": true,
+        "is_devpost_url": false,
+        "title": "AECademy",
+        "award": "No Award Found",
+        "summary": "A Sketch-Based Content Retrieval System, an innovative search engine that allows users to use sketches to search for relevant content within a digital database. It is designed to interpret the attributes of the sketched input and provide results such as PDF documents, 3D models, and detailed text descriptions that closely match the sketch."
+    },
+    {
+        "url": "https://github.com/PickardChilton/XRVZ/tree/main",
+        "is_github_url": true,
+        "is_devpost_url": false,
+        "title": "XRVZ",
+        "award": "No Award Found",
+        "summary": "Open source WebXR viewer that works on any WebXR-enabled device running in an immersive model viewer, plugging into analysis models like Forma, Hypar, or Viktor for heightened understanding of data"
+    },
+    {
+        "url": "https://github.com/snabela/AECTech2023 ",
+        "is_github_url": true,
+        "is_devpost_url": false,
+        "title": "COLLAB",
+        "award": "No Award Found",
+        "summary": "This hackathon leverages a diverse range of tools to create a interactive structural optimization and review web applet built in Viktor."
+    },
+    {
+        "url": "https://github.com/EZ-Script/EZRX-Scripting",
+        "is_github_url": true,
+        "is_devpost_url": false,
+        "title": "Ez.Rx",
+        "award": "No Award Found",
+        "summary": "EZRX is a plug-in for Rhino that helps a user use Chat GPT to create scripted Grasshopper nodes."
+    },
+    {
+        "url": "https://github.com/jackDang2803/FindIt",
+        "is_github_url": true,
+        "is_devpost_url": false,
+        "title": "FindIT",
+        "award": "No Award Found",
+        "summary": "Forestry Identification and Navigation forDigital Imaging Transfer"
+    },
+    {
+        "url": "https://github.com/phzx3691/WasteD-Image-Labeling",
+        "is_github_url": true,
+        "is_devpost_url": false,
+        "title": "Wasted",
+        "award": "No Award Found",
+        "summary": "Unlock value in existing end of service buildings. Use Reality Capture, AI and Parametric Design to define value, repurpose, and reuse."
+    },
+    {
+        "url": "https://github.com/RolandoV/RAMit",
+        "is_github_url": true,
+        "is_devpost_url": false,
+        "title": "RAMit",
+        "award": "No Award Found",
+        "summary": "Revit to Ram Concept Interoperability"
+    },
+    {
+        "url": "https://github.com/enmerk4r/GHPT",
+        "is_github_url": true,
+        "is_devpost_url": false,
+        "title": "GhPT",
+        "award": "BEST OVERALL HACK:",
+        "summary": "This project sets out to find a way to leverage the power of ChatGPT to create Grasshopper definitions."
+    },
+    {
+        "url": "https://github.com/chinsishe/carbonhacker",
+        "is_github_url": true,
+        "is_devpost_url": false,
+        "title": "Carbon Hacker",
+        "award": "BEST COLLABORATIVE HACK:",
+        "summary": "No Summary Found"
+    },
+    {
+        "url": "https://github.com/kcpgilbert/HeatIslandHero",
+        "is_github_url": true,
+        "is_devpost_url": false,
+        "title": "Heat Island Hero",
+        "award": "BEST OVERALL HACK:",
+        "summary": "No Summary Found"
+    },
+    {
+        "url": "https://github.com/mirahx24/AECTech-Hackathon-ClimateCanvas",
+        "is_github_url": true,
+        "is_devpost_url": false,
+        "title": "C-Canvas",
+        "award": "BEST COLLABORATIVE HACK:",
+        "summary": "No Summary Found"
+    },
+    {
+        "url": "https://github.com/sophXmoore1/snapCycle",
+        "is_github_url": true,
+        "is_devpost_url": false,
+        "title": "Snap Cycle",
+        "award": "MOST SUSTAINABLE HACK:",
+        "summary": "No Summary Found"
+    },
+    {
+        "url": "https://github.com/AntonioWritesCode/CarbonEater",
+        "is_github_url": true,
+        "is_devpost_url": false,
+        "title": "Sustainable Collaborators",
+        "award": "No Award Found",
+        "summary": "Read structural template image and optimize carbon output."
+    },
+    {
+        "url": "https://github.com/clicketyclackety/Crash",
+        "is_github_url": true,
+        "is_devpost_url": false,
+        "title": "Crash!",
+        "award": "BEST OVERALL HACK:",
+        "summary": "No Summary Found"
+    },
+    {
+        "url": "https://github.com/pedrocortesark/dreamhopper",
+        "is_github_url": true,
+        "is_devpost_url": false,
+        "title": "Dreamhopper",
+        "award": "BEST OPEN SOURCE HACK:",
+        "summary": "No Summary Found"
+    },
+    {
+        "url": "https://github.com/vimaec/difference-engine",
+        "is_github_url": true,
+        "is_devpost_url": false,
+        "title": "Difference Machine",
+        "award": "No Award Found",
+        "summary": "Calculating differences between BIM models"
+    },
+    {
+        "url": "https://github.com/just-ajs/DevHops",
+        "is_github_url": true,
+        "is_devpost_url": false,
+        "title": "DevHops",
+        "award": "No Award Found",
+        "summary": "Visual programming interface with kanban for project management"
+    },
+    {
+        "url": "https://github.com/EmilPoulsen/ConfigAR.App",
+        "is_github_url": true,
+        "is_devpost_url": false,
+        "title": "ConfigAR",
+        "award": "No Award Found",
+        "summary": "Connecting augmented reality with the super powers of parametric design and Grasshopper. Making it possible to visualize configurable designs in the real world using nothing else but your phone."
+    },
+    {
+        "url": "https://github.com/EmptyBox-Design/project-vibe",
+        "is_github_url": true,
+        "is_devpost_url": false,
+        "title": "Project-Vibe",
+        "award": "No Award Found",
+        "summary": "Project-Vibe allows users to query anywhere in NYC to find what businesses are walking distance from the site."
+    },
+    {
+        "url": "https://github.com/simpleSketche/GraFix",
+        "is_github_url": true,
+        "is_devpost_url": false,
+        "title": "GraFix",
+        "award": "No Award Found",
+        "summary": "No Summary Found"
+    },
+    {
+        "url": "https://github.com/xyang920/Seism-sim.git",
+        "is_github_url": true,
+        "is_devpost_url": false,
+        "title": "Seism-Sim",
+        "award": "No Award Found",
+        "summary": "Using Unity and C# to develop a program to visualize game-effect building's time history response under an earthquake curve."
+    },
+    {
+        "url": "https://github.com/enmerk4r/pixeling",
+        "is_github_url": true,
+        "is_devpost_url": false,
+        "title": "Pixeling",
+        "award": "BEST OPEN SOURCE HACK:",
+        "summary": "No Summary Found"
+    },
+    {
+        "url": "https://github.com/MattBramante/BestFitAECHackAThon2021",
+        "is_github_url": true,
+        "is_devpost_url": false,
+        "title": "Best Fit",
+        "award": "No Award Found",
+        "summary": "No Summary Found"
+    },
+    {
+        "url": "https://github.com/amitlzkpa/ar-points",
+        "is_github_url": true,
+        "is_devpost_url": false,
+        "title": "Spatial Scheduler",
+        "award": "BEST OVERALL HACK:",
+        "summary": "No Summary Found"
+    },
+    {
+        "url": "https://github.com/enmerk4r/Bonobo",
+        "is_github_url": true,
+        "is_devpost_url": false,
+        "title": "Bonobo",
+        "award": "BEST OPEN SOURCE HACK:",
+        "summary": "No Summary Found"
+    },
+    {
+        "url": "https://github.com/EmilPoulsen/Hackuble",
+        "is_github_url": true,
+        "is_devpost_url": false,
+        "title": "Hackuble",
+        "award": "No Award Found",
+        "summary": "No Summary Found"
+    },
+    {
+        "url": "https://github.com/markhorgan/ganplan-webapp",
+        "is_github_url": true,
+        "is_devpost_url": false,
+        "title": "No Title Found",
+        "award": "BEST OPEN SOURCE HACK:",
+        "summary": "No Summary Found"
+    },
+    {
+        "url": "https://github.com/TheodoreGalanos/Layout5",
+        "is_github_url": true,
+        "is_devpost_url": false,
+        "title": "No Title Found",
+        "award": "BEST COLLABORATIVE HACK:",
+        "summary": "No Summary Found"
+    },
+    {
+        "url": "https://github.com/gener8-io/gener8",
+        "is_github_url": true,
+        "is_devpost_url": false,
+        "title": "Gener8.io",
+        "award": "No Award Found",
+        "summary": "No Summary Found"
+    },
+    {
+        "url": "https://github.com/enmerk4r/SmokingGAN",
+        "is_github_url": true,
+        "is_devpost_url": false,
+        "title": "Smoking GAN",
+        "award": "No Award Found",
+        "summary": "No Summary Found"
+    },
+    {
+        "url": "https://github.com/djsiroky/aectech2019-sketchto3d-frontend",
+        "is_github_url": true,
+        "is_devpost_url": false,
+        "title": "SketchGAN",
+        "award": "BEST OVERALL HACK:",
+        "summary": "No Summary Found"
+    },
+    {
+        "url": "https://github.com/cdriesler/building-ballot",
+        "is_github_url": true,
+        "is_devpost_url": false,
+        "title": "Building Ballot",
+        "award": "BEST COLLABORATION:",
+        "summary": "No Summary Found"
+    },
+    {
+        "url": "https://github.com/oliveregreen/regular",
+        "is_github_url": true,
+        "is_devpost_url": false,
+        "title": "Regular Espressos",
+        "award": "No Award Found",
+        "summary": "No Summary Found"
+    },
+    {
+        "url": "https://github.com/nicoazel/arcrhino",
+        "is_github_url": true,
+        "is_devpost_url": false,
+        "title": "ArcRhino",
+        "award": "No Award Found",
+        "summary": "No Summary Found"
+    },
+    {
+        "url": "https://github.com/preynoldson/punchboss",
+        "is_github_url": true,
+        "is_devpost_url": false,
+        "title": "PunchBoss",
+        "award": "No Award Found",
+        "summary": "No Summary Found"
+    },
+    {
+        "url": "https://github.com/LelandCurtis/daylighting-design-space",
+        "is_github_url": true,
+        "is_devpost_url": false,
+        "title": "Null Stack",
+        "award": "No Award Found",
+        "summary": "No Summary Found"
+    },
+    {
+        "url": "https://github.com/nadya/mechahopper",
+        "is_github_url": true,
+        "is_devpost_url": false,
+        "title": "MECHAHOPPER",
+        "award": "BEST OVERALL HACK:",
+        "summary": "No Summary Found"
+    },
+    {
+        "url": "https://github.com/Brandoncyu/aechackathon2019",
+        "is_github_url": true,
+        "is_devpost_url": false,
+        "title": "GitHub 1",
+        "award": "BEST OPEN SOURCE: Stroll (",
+        "summary": "No Summary Found"
+    },
+    {
+        "url": "https://devpost.com/software/eagle",
+        "is_github_url": false,
+        "is_devpost_url": true,
+        "title": "Eagle",
+        "award": "BEST COLLABORATION:",
+        "summary": "No Summary Found"
+    },
+    {
+        "url": "https://github.com/dalefugier/RealDrawings",
+        "is_github_url": true,
+        "is_devpost_url": false,
+        "title": "Layout Hawk",
+        "award": "No Award Found",
+        "summary": "No Summary Found"
+    },
+    {
+        "url": "https://github.com/pearswj/damagedogs",
+        "is_github_url": true,
+        "is_devpost_url": false,
+        "title": "DamageDogs",
+        "award": "No Award Found",
+        "summary": "No Summary Found"
+    },
+    {
+        "url": "https://github.com/RESThopper",
+        "is_github_url": true,
+        "is_devpost_url": false,
+        "title": "RESThopper",
+        "award": "BEST OVERALL HACK:",
+        "summary": "No Summary Found"
+    },
+    {
+        "url": "https://github.com/alexzhou007/VIF",
+        "is_github_url": true,
+        "is_devpost_url": false,
+        "title": "Verify in Field (VIF)",
+        "award": "BEST OPEN SOURCE:",
+        "summary": "No Summary Found"
+    },
+    {
+        "url": "https://github.com/mitevpi/thesaurus",
+        "is_github_url": true,
+        "is_devpost_url": false,
+        "title": "theSAURUS",
+        "award": "No Award Found",
+        "summary": "No Summary Found"
+    },
+    {
+        "url": "https://github.com/Crashnorun/GoRhinoGo",
+        "is_github_url": true,
+        "is_devpost_url": false,
+        "title": "GoRhinoGo",
+        "award": "No Award Found",
+        "summary": "No Summary Found"
+    },
+    {
+        "url": "https://github.com/amitlzkpa/SneakyCat",
+        "is_github_url": true,
+        "is_devpost_url": false,
+        "title": "SneakyCat",
+        "award": "No Award Found",
+        "summary": "No Summary Found"
+    },
+    {
+        "url": "https://github.com/eertugrul/RhinoInsideSAP",
+        "is_github_url": true,
+        "is_devpost_url": false,
+        "title": "Stridulator",
+        "award": "No Award Found",
+        "summary": "No Summary Found"
+    },
+    {
+        "url": "https://github.com/MingboPeng/AECTech18_RhinoInRevit/",
+        "is_github_url": true,
+        "is_devpost_url": false,
+        "title": "Take \u2018n Bake",
+        "award": "No Award Found",
+        "summary": "No Summary Found"
+    },
+    {
+        "url": "https://github.com/hanshenSun/grassFlow",
+        "is_github_url": true,
+        "is_devpost_url": false,
+        "title": "Grassflow",
+        "award": "No Award Found",
+        "summary": "No Summary Found"
+    },
+    {
+        "url": "https://github.com/mm-wang/metashape",
+        "is_github_url": true,
+        "is_devpost_url": false,
+        "title": "Metashape",
+        "award": "No Award Found",
+        "summary": "No Summary Found"
+    },
+    {
+        "url": "https://github.com/EmilPoulsen/K2Engineering",
+        "is_github_url": true,
+        "is_devpost_url": false,
+        "title": "K2Engineering",
+        "award": "No Award Found",
+        "summary": "No Summary Found"
+    },
+    {
+        "url": "https://github.com/jlankitus/Dynamidi",
+        "is_github_url": true,
+        "is_devpost_url": false,
+        "title": "DynaMidi",
+        "award": "No Award Found",
+        "summary": "No Summary Found"
+    },
+    {
+        "url": "https://github.com/interopxyz/Aviary",
+        "is_github_url": true,
+        "is_devpost_url": false,
+        "title": "Aviary",
+        "award": "No Award Found",
+        "summary": "No Summary Found"
+    },
+    {
+        "url": "https://github.com/RevitAirflowDesigner/RevitAirflowDesigner",
+        "is_github_url": true,
+        "is_devpost_url": false,
+        "title": "Duct People",
+        "award": "No Award Found",
+        "summary": "No Summary Found"
+    },
+    {
+        "url": "https://github.com/ladybug-tools/honeybee-server",
+        "is_github_url": true,
+        "is_devpost_url": false,
+        "title": "Honeybee Server",
+        "award": "No Award Found",
+        "summary": "No Summary Found"
+    },
+    {
+        "url": "https://github.com/mkero-tt/Revilations",
+        "is_github_url": true,
+        "is_devpost_url": false,
+        "title": "Revilations",
+        "award": "No Award Found",
+        "summary": "No Summary Found"
+    },
+    {
+        "url": "https://github.com/anddoyoueverfeel/tthack2017",
+        "is_github_url": true,
+        "is_devpost_url": false,
+        "title": "Shuffle",
+        "award": "No Award Found",
+        "summary": "No Summary Found"
+    },
+    {
+        "url": "https://aectechhack2017.devpost.com/submissions/79989-airflownetowrk_visualizer",
+        "is_github_url": false,
+        "is_devpost_url": true,
+        "title": "Airflow Network Visualizer",
+        "award": "No Award Found",
+        "summary": "No Summary Found"
+    },
+    {
+        "url": "https://github.com/ladybug-tools/ladybugvizzz",
+        "is_github_url": true,
+        "is_devpost_url": false,
+        "title": "Ladybug Vizzz!",
+        "award": "No Award Found",
+        "summary": "No Summary Found"
+    },
+    {
+        "url": "https://devpost.com/software/revit-dynamo-json",
+        "is_github_url": false,
+        "is_devpost_url": true,
+        "title": "Revit Dynamo JSON",
+        "award": "No Award Found",
+        "summary": "No Summary Found"
+    },
+    {
+        "url": "https://devpost.com/software/tango-go",
+        "is_github_url": false,
+        "is_devpost_url": true,
+        "title": "Tango Go",
+        "award": "No Award Found",
+        "summary": "No Summary Found"
+    },
+    {
+        "url": "https://devpost.com/software/design-generator-82ulo4",
+        "is_github_url": false,
+        "is_devpost_url": true,
+        "title": "Design Generator",
+        "award": "",
+        "summary": "No Summary Found"
+    },
+    {
+        "url": "https://github.com/sasakiassociates/revit-3d-print",
+        "is_github_url": true,
+        "is_devpost_url": false,
+        "title": "3D Print and Revit",
+        "award": "No Award Found",
+        "summary": "No Summary Found"
+    },
+    {
+        "url": "https://devpost.com/software/benmap-ey817q",
+        "is_github_url": false,
+        "is_devpost_url": true,
+        "title": "BEnMap",
+        "award": "No Award Found",
+        "summary": "No Summary Found"
+    },
+    {
+        "url": "https://github.com/DOCQR/docqr.github.io",
+        "is_github_url": true,
+        "is_devpost_url": false,
+        "title": "docQR",
+        "award": "BEST OVERALL HACK:",
+        "summary": "No Summary Found"
+    },
+    {
+        "url": "https://github.com/HydraShare/hydra",
+        "is_github_url": true,
+        "is_devpost_url": false,
+        "title": "Hydra",
+        "award": "BEST HACK USING EXISTING APPLICATIONS:",
+        "summary": "No Summary Found"
+    },
+    {
+        "url": "https://github.com/pix3lot/Slackit",
+        "is_github_url": true,
+        "is_devpost_url": false,
+        "title": "Slackit",
+        "award": "BEST COLLABORATION/OPEN SOURCE:",
+        "summary": "No Summary Found"
+    },
+    {
+        "url": "https://github.com/danielinocente/application",
+        "is_github_url": true,
+        "is_devpost_url": false,
+        "title": "Skinventor",
+        "award": "No Award Found",
+        "summary": "No Summary Found"
+    }
+]
