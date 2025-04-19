@@ -1,14 +1,10 @@
 from typing import List, Dict, Any, Optional
 from pathlib import Path
+import json
 from langchain_openai import OpenAIEmbeddings
 from langchain_community.vectorstores import FAISS
 from langchain.text_splitter import RecursiveCharacterTextSplitter
-from langchain_community.document_loaders import (
-    TextLoader,
-    PDFLoader,
-    Docx2txtLoader,
-    UnstructuredMarkdownLoader
-)
+from langchain.schema import Document
 from src.config.config import ConfigManager
 
 class VectorDB:
@@ -31,62 +27,88 @@ class VectorDB:
             chunk_overlap=200
         )
     
-    def _get_loader(self, file_path: str):
-        """Get the appropriate document loader based on file extension."""
-        file_ext = Path(file_path).suffix.lower()
-        if file_ext == '.txt':
-            return TextLoader(file_path)
-        elif file_ext == '.pdf':
-            return PDFLoader(file_path)
-        elif file_ext == '.docx':
-            return Docx2txtLoader(file_path)
-        elif file_ext == '.md':
-            return UnstructuredMarkdownLoader(file_path)
-        else:
-            raise ValueError(f"Unsupported file type: {file_ext}")
+    def _get_project_root(self) -> Path:
+        """Get the project root directory."""
+        return Path(__file__).parent.parent.parent
     
-    def load_documents(self, directory_path: str) -> None:
-        """Load and index documents from a directory.
+    def _load_json_data(self, file_path: str) -> List[Document]:
+        """Load and process data from JSON file.
         
         Args:
-            directory_path: Path to the directory containing documents
+            file_path: Path to the JSON file
+            
+        Returns:
+            List of Document objects
         """
+        with open(file_path, 'r') as f:
+            data = json.load(f)
+        
         documents = []
-        directory = Path(directory_path)
+        for item in data:
+            # Create a document for each item in the JSON
+            content = f"Title: {item.get('title', '')}\n"
+            content += f"Description: {item.get('description', '')}\n"
+            content += f"Technologies: {', '.join(item.get('technologies', []))}\n"
+            content += f"Team: {', '.join(item.get('team', []))}\n"
+            
+            documents.append(Document(
+                page_content=content,
+                metadata={
+                    "id": item.get('id', ''),
+                    "title": item.get('title', ''),
+                    "url": item.get('url', ''),
+                    "source": "hackathon_data"
+                }
+            ))
         
-        if not directory.exists():
-            raise ValueError(f"Directory not found: {directory_path}")
+        return documents
+    
+    def load_documents(self) -> None:
+        """Load and index documents from the configured data source."""
+        data_config = self.config.data
+        project_root = self._get_project_root()
         
-        # Load all supported documents
-        for file_path in directory.glob("**/*"):
-            if file_path.is_file():
-                try:
-                    loader = self._get_loader(str(file_path))
-                    documents.extend(loader.load())
-                except ValueError:
-                    continue  # Skip unsupported file types
+        # Get absolute paths
+        source_file = project_root / data_config.source_file
+        vector_store_path = project_root / data_config.vector_store_path
+        
+        if not source_file.exists():
+            raise ValueError(f"Data source file not found: {source_file}")
+        
+        # Load documents from JSON
+        documents = self._load_json_data(str(source_file))
         
         if not documents:
-            raise ValueError("No documents found in the specified directory")
+            raise ValueError("No documents found in the data source")
         
         # Split documents into chunks
         texts = self.text_splitter.split_documents(documents)
         
         # Create vector store
         self.vector_store = FAISS.from_documents(texts, self.embeddings)
+        
+        # Save the vector store
+        vector_store_path.parent.mkdir(parents=True, exist_ok=True)
+        self.vector_store.save_local(str(vector_store_path))
     
-    def similarity_search(self, query: str, k: int = 10) -> List[Dict[str, Any]]:
+    def similarity_search(self, query: str, k: int = 50) -> List[Dict[str, Any]]:
         """Search for similar documents.
         
         Args:
             query: Search query
-            k: Number of results to return
+            k: Number of results to return (default: 50)
             
         Returns:
             List of dictionaries containing document content and metadata
         """
         if self.vector_store is None:
-            raise ValueError("No documents have been loaded. Call load_documents() first.")
+            # Try to load from disk if not in memory
+            project_root = self._get_project_root()
+            vector_store_path = project_root / self.config.data.vector_store_path
+            if vector_store_path.exists():
+                self.vector_store = FAISS.load_local(str(vector_store_path), self.embeddings)
+            else:
+                raise ValueError("No documents have been loaded. Call load_documents() first.")
         
         # Perform similarity search
         docs = self.vector_store.similarity_search(query, k=k)
