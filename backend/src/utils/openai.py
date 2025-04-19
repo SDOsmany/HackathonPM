@@ -1,7 +1,6 @@
 from langchain_openai import ChatOpenAI
-from dotenv import load_dotenv
-import os
 from typing import Optional
+from src.config.config import ConfigManager
 
 class OpenAIClient:
     _instance: Optional['OpenAIClient'] = None
@@ -11,8 +10,20 @@ class OpenAIClient:
         # Prevent direct instantiation
         if OpenAIClient._instance is not None:
             raise RuntimeError("Use get_instance() instead")
-        load_dotenv()
         
+        # Get OpenAI config
+        config = ConfigManager().get_openai_config()
+        
+        # Initialize the LLM
+        self._llm = ChatOpenAI(
+            model=config.model,
+            temperature=config.temperature,
+            max_tokens=config.max_tokens,
+            timeout=None,
+            max_retries=2,
+            api_key=config.api_key,
+        )
+    
     @classmethod
     def get_instance(cls) -> 'OpenAIClient':
         if cls._instance is None:
@@ -21,15 +32,6 @@ class OpenAIClient:
     
     @property
     def llm(self) -> ChatOpenAI:
-        if self._llm is None:
-            self._llm = ChatOpenAI(
-                model="gpt-4.1",  # Fixed typo from "gpt-4o"
-                temperature=0,
-                max_tokens=None,
-                timeout=None,
-                max_retries=2,
-                api_key=os.getenv("OPENAI_API_KEY"),
-            )
         return self._llm
     
     def create_agent(self, tools, prompt):
