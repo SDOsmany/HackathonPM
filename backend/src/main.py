@@ -59,13 +59,13 @@ async def rag_query(
     response = await rag_agent.process({"query": request.query})
     return response
 
-@app.post("/plans")
+@router.post("/plans")
 async def generate_plan(input_data: IdeaInput) -> Dict[str, Any]:
     """Generate a detailed project plan for a selected idea."""
     try:
         project_planner_agent = ProjectPlannerAgent(OpenAIClient.get_instance())
         response = await project_planner_agent.process(input_data.dict())
-        return response
+        return {"rawText": response}
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
 

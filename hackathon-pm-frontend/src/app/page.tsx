@@ -8,8 +8,8 @@ import { API_ENDPOINTS } from '@/config/api';
 // Import your components
 import InputForm from '@/components/InputForm';
 import IdeaList from '@/components/IdeaList';
-import PlanDisplay from '@/components/PlanDisplay';
-
+// import PlanDisplay from '@/components/PlanDisplay';
+import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 // Define the phases
 type AppPhase = 'input' | 'generating_ideas' | 'show_ideas' | 'generating_plan' | 'show_plan' | 'error';
 
@@ -74,9 +74,9 @@ export default function HomePage() {
       }
 
       const data = await res.json();
-      console.log("plan data:", data)
       // Assuming backend returns ExecutionPlan object
-      setExecutionPlan(data.rawText); // Assuming the plan is in data.plan
+      console.log("plan data:", data)
+      setExecutionPlan(data); // Assuming the plan is in data.plan
       setPhase('show_plan');
 
     } catch (err: unknown) {
@@ -128,7 +128,7 @@ export default function HomePage() {
 
   return (
     <div className="container mx-auto px-4 py-8 max-w-3xl">
-      <h1 className="text-4xl font-bold text-center mb-8">hackathonPM</h1>
+      <h1 className="text-4xl font-bold text-center mb-8">HackathonPM</h1>
       <p className="text-center text-lg text-muted-foreground mb-8">
         Turn your hackathon theme into a plan.
       </p>
@@ -167,12 +167,30 @@ export default function HomePage() {
       )}
 
       {phase === 'show_plan' && executionPlan && selectedIdea && (
-        <PlanDisplay
-          ideaTitle={selectedIdea.title}
-          plan={executionPlan}
-          onRefine={handleRefinePlan}
-          onStartOver={handleStartOver}
-        />
+        // <PlanDisplay
+        //   ideaTitle={selectedIdea.title}
+        //   plan={executionPlan}
+        //   onRefine={handleRefinePlan}
+        //   onStartOver={handleStartOver}
+        // />
+        <Card className="w-full">
+        <CardHeader>
+          <CardTitle className="text-center text-2xl">{selectedIdea.title}</CardTitle>
+          <CardDescription className="text-center">Your Hackathon Execution Plan</CardDescription>
+        </CardHeader>
+        <CardContent>
+          <div className="mt-6 max-h-[60vh] overflow-y-auto">
+            <pre className="whitespace-pre-wrap font-mono text-sm bg-gray-100 dark:bg-gray-800 p-4 rounded-md">
+              {executionPlan.rawText}
+            </pre>
+          </div>
+          <div className="flex flex-col md:flex-row gap-4 mt-6">
+            <Button onClick={handleStartOver} variant="ghost" className="flex-grow">
+              Start Over
+            </Button>
+          </div>
+        </CardContent>
+      </Card>
       )}
 
       {phase === 'error' && (
@@ -185,7 +203,7 @@ export default function HomePage() {
 
         {/* Optional: Keep the footer visible */}
          <footer className="text-center text-sm text-muted-foreground mt-12">
-             Built for Hackathon 2023/2024
+             Built for Microsoft Hackathon 2025!
          </footer>
 
     </div>

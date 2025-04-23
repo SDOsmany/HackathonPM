@@ -50,64 +50,14 @@ class ProjectPlannerAgent(BaseAgent):
            - Environment setup
            - Monitoring and logging
 
-        Format your response as a JSON object with the following structure:
-        {
-            "status": "success",
-            "message": "string describing the response",
-            "project_plan": {
-                "title": "project title",
-                "phases": [
-                    {
-                        "name": "phase name",
-                        "duration": "estimated duration",
-                        "tasks": [
-                            {
-                                "name": "task name",
-                                "description": "detailed description",
-                                "duration": "estimated time",
-                                "dependencies": ["task1", "task2"],
-                                "technologies": ["tech1", "tech2"],
-                                "challenges": ["challenge1", "challenge2"]
-                            }
-                        ]
-                    }
-                ],
-                "technical_architecture": {
-                    "frontend": {
-                        "framework": "framework name",
-                        "libraries": ["lib1", "lib2"],
-                        "components": ["comp1", "comp2"]
-                    },
-                    "backend": {
-                        "framework": "framework name",
-                        "libraries": ["lib1", "lib2"],
-                        "apis": ["api1", "api2"]
-                    },
-                    "database": {
-                        "type": "database type",
-                        "schema": "schema description"
-                    }
-                },
-                "ui_ux": {
-                    "color_scheme": ["color1", "color2"],
-                    "screens": ["screen1", "screen2"],
-                    "components": ["comp1", "comp2"],
-                    "user_flow": "flow description"
-                },
-                "deployment": {
-                    "platform": "platform name",
-                    "pipeline": ["step1", "step2"],
-                    "environments": ["env1", "env2"]
-                }
-            }
-        }
-
+        Make sure to respond in plain text, not JSON.
+        
         Make sure to:
         - Keep all time estimates realistic for a 24-48 hour hackathon
         - Include specific technologies and tools
         - Provide detailed but actionable tasks
         - Consider scalability and maintainability
-        - Return ONLY the JSON object, no other text"""
+    """
     
     def _parse_json_response(self, text: str) -> Dict[str, Any]:
         """Parse the response text to extract JSON.
@@ -154,4 +104,4 @@ class ProjectPlannerAgent(BaseAgent):
         response = await self.openai_client.llm.ainvoke(messages)
         
         # Parse the response to extract JSON
-        return self._parse_json_response(response.content) 
+        return response.content
