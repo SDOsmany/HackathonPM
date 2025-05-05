@@ -104,15 +104,15 @@ export default function HomePage() {
     generatePlan(idea);
   };
 
-  const handleRefinePlan = () => {
-      // TODO: Implement refinement logic.
-      // This would likely involve another API call, maybe sending
-      // the current plan text + user instructions for refinement.
-      console.log("Refine plan clicked for idea:", selectedIdea?.title);
-      alert("Refine functionality not yet implemented!");
-      // setPhase('refining_plan'); // Example phase
-      // refinePlanAPI(selectedPlan, refineInstructions);
-  };
+  // const handleRefinePlan = () => {
+  //     // TODO: Implement refinement logic.
+  //     // This would likely involve another API call, maybe sending
+  //     // the current plan text + user instructions for refinement.
+  //     console.log("Refine plan clicked for idea:", selectedIdea?.title);
+  //     alert("Refine functionality not yet implemented!");
+  //     // setPhase('refining_plan'); // Example phase
+  //     // refinePlanAPI(selectedPlan, refineInstructions);
+  // };
 
   const handleStartOver = () => {
       setPhase('input');
